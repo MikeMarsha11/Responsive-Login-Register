@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <title>Responsive Sliding Form</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    </head>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bluebg">
+        <div class="box signin">
+          <h2>Already Have an Account?</h2>
+          <button class="signinBtn">Sign in</button>
+        </div>
+        <div class="box signup">
+          <h2>Don't Have an Account?</h2>
+          <button class="signupBtn">Sign up</button>
+        </div>
+      </div>
+      <div class="formBx">
+        <div class="form signinForm">
+          <form>
+            <h3>Sign In</h3>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <input type="submit" placeholder="Login">
+            <a href="#" class="forgot">Forgot Passwrod</a>
+          </form>
+        </div>
+
+        <div class="form signupForm">
+          <form>
+            <h3>Sign Up</h3>
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="Email Address">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm Password">
+            <input type="submit" placeholder="Register">
+            <a href="#" class="forgot">Forgot Passwrod</a>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const signinBtn = document.querySelector('.signinBtn');
+      const signupBtn = document.querySelector('.signupBtn');
+      const formBx = document.querySelector('.formBx');
+      const body = document.querySelector('body');
+
+      signupBtn.onclick = function(){
+        formBx.classList.add('active')
+        body.classList.add('active')
+      }
+
+      signinBtn.onclick = function(){
+        formBx.classList.remove('active')
+        body.classList.remove('active')
+      }
+
+
+    </script>
+
+  </body>
+</html>
